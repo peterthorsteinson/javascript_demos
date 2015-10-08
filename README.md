@@ -1,2 +1,2 @@
 # javascript_demos
-Collection of short javascript code demos
+This is a collection of short javascript code demos.
