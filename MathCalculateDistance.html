@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MathCalculateDistance.html</title>
+</head>
+<body>
+<h1>Math Calculate Distance</h1>
+<button onclick="displayRandomNumber()">Display Random Number</button>
+<p id="randomNumber">?</p>
+<hr/>
+<label for="x1">x1:</label>
+<input type="text" id="x1" value="0">
+<label for="y1">y1:</label>
+<input type="text" id="y1" value="0">
+<br/>
+<label for="x2">x2:</label>
+<input type="text" id="x2" value="3">
+<label for="y2">y2:</label>
+<input type="text" id="y2" value="4">
+<br/>
+<button onclick="displayDistance()">Display Distance</button>
+
+<p id="distance">?</p>
+<hr/>
+<script>
+  function displayDistance() {
+    var x1 = document.getElementById("x1").value;
+    var y1 = document.getElementById("y1").value;
+    var x2 = document.getElementById("x2").value;
+    var y2 = document.getElementById("y2").value;
+    document.getElementById("distance").innerHTML = calculateDistance(x1, y1, x2, y2);
+  }
+  function calculateDistance(x1, y1, x2, y2) {
+    var delta_x = (x2 - x1);
+    var delta_y = (y2 - y1);
+console.log(delta_x);
+console.log(delta_y);
+    return Math.sqrt(delta_x*delta_x + delta_y*delta_y);
+  }
+  function displayRandomNumber() {
+    document.getElementById("randomNumber").innerHTML = Math.random();
+  }
+</script>
+</body>
+</html>

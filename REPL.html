@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REPL.html</title>
+</head>
+<body>
+<h1>JavaScript REPL</h1>
+<p>Enter JavaScript</p>
+<textarea id="code" rows="10" cols="50">
+</textarea> 
+</br>
+<button onclick="evalCode()">Eval Code</button>
+<p>Output:</p>
+<textarea id="output" rows="10" cols="50">
+</textarea> 
+<script>
+  console.log = function(output) {
+    document.getElementById("output").innerText = output;
+  }
+  function evalCode() {
+  var code = document.getElementById("code").innerText;
+  eval(code);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>style</h1>
+
+<p id="paragraph">This style will change...</p>
+
+<button onclick="changeParagraphStyle()">Change Paragraph Style</button>
+
+<script>
+function changeParagraphStyle() {
+    var p = document.getElementById("paragraph");
+    p.style.fontSize = "36px";
+    p.style.color = "red";
+    p.style.backgroundColor = "yellow";
+    p.style.textIndent = "50px";
+    p.style.textShadow = "5px 5px 1px salmon";
+}
+</script>
+
+</body>
+</html> 

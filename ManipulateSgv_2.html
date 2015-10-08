@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ManipulateSgv_2.html</title>
+</head>
+<body style="text-align: center">
+  <h1>Manipulate SVG 2</h1>
+  <p>Click circle to change color.</p>
+
+  <svg width="240" height="240" viewBox="0 0 240 240" onclick="toggleCircleColor()"
+     xmlns="http://www.w3.org/2000/svg" version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient id="myGradient">
+            <stop id="stop1" offset="20%" stop-color="#ff0"/>
+            <stop id="stop2" offset="90%" stop-color="#666"/>
+        </radialGradient>
+    </defs>
+    <circle fill="url(#myGradient)"
+            cx="120" cy="120" r="100"/>
+  </svg>
+
+  <script>
+    function toggleCircleColor() {
+      var stop1 = document.getElementById('stop1');
+      var stopColor1 = stop1.getAttribute('stop-color');
+      if (stopColor1 === '#ff0') {
+        stop1.setAttribute('stop-color', '#0ff');
+      } else {
+        stop1.setAttribute('stop-color', '#ff0');
+      }
+    }
+  </script>
+</body>
+</html>

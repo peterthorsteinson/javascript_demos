@@ -1,0 +1,33 @@
+https://addons.mozilla.org/en-US/firefox/addon/firebug/
+
+jsfiddle
+codepen.io
+repl.it
+
+Unicode
+
+Strict mode
+
+key words and reserved words
+
+JSLint -> http://www.jslint.com/
+
+Object.create
+
+.addEventListener
+
+jQuery
+
+XHR
+
+canvas
+
+svg
+
+optional whitespace, semicolons, vars, parameters, return values
+
+The "this" keyword refers to the object on which a function is called.
+
+
+
+

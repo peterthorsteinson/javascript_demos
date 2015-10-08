@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CreateElements.html</title>
+</head>
+<body>
+<h1>Create Elements</h1>
+<label for="newItem">Enter new item:</label>
+<input type="text" id="newItem">
+<br>
+<input type='button' onclick='addNewItem()' value='Add New Item' />
+<ol id="orderedList">
+</ol>
+<script>
+  var list = document.getElementById('orderedList');
+  function addNewItem() {
+    var newItemInputElement = document.getElementById('newItem');
+    var newItemValue = newItemInputElement.value;
+    newItemValue = newItemValue.trim();
+    if (newItemValue !== "") {
+      var entry = document.createElement('li');
+      entry.appendChild(document.createTextNode(newItemValue));
+      list.appendChild(entry);
+    }
+    newItemInputElement.value = "";
+  }
+</script>
+</body>
+</html> 

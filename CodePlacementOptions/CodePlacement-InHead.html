@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  function headFunction(elementID, text, color) {
+    var element = document.getElementById(elementID);
+    element.innerHTML = text;
+    element.style.color = color;
+ }
+</script>
+</head>
+
+<body>
+
+<h1>JavaScript Code Placement - In Head</h1>
+
+<p id="output">original contents</p>
+
+<button type="button" 
+  onclick="headFunction('output', 'JavaScript function in head element', 'red')">
+  Call JavaScript function in head element
+</button>
+
+</body>
+</html>

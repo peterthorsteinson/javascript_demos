@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>CanvasGraphics.html</title>
+<body>
+<h1>Canvas Graphics</h1>
+<canvas id="canvas" width="400" height="400" style="border:1px solid #ff00ff;">
+  HTML5 canvas not supported!
+</canvas>
+
+<script>
+
+function deg2rad(deg) {
+  return Math.PI*deg/180;
+}  
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(200, 200, 100, 0, deg2rad(270));
+ctx.lineTo(200, 200);
+ctx.closePath();
+ctx.fillStyle = "yellow";
+ctx.lineWidth = 5;
+ctx.fill();
+ctx.stroke();
+
+</script>
+
+</body>
+</html>

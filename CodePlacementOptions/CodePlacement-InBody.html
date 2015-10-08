@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h1>JavaScript Code Placement - In Body</h1>
+
+<p id="output">original contents</p>
+
+<button type="button" 
+  onclick="bodyFunction('output', 'JavaScript function in head element', 'red')">
+  Call JavaScript function in head element
+</button>
+
+<script>
+  function bodyFunction(elementID, text, color) {
+    var element = document.getElementById(elementID);
+    element.innerHTML = text;
+    element.style.color = color;
+ }
+</script>
+
+</body>
+</html>

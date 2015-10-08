@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Piano.html</title>
+</head>
+<body>
+<h1>Piano</h1>
+<svg width="168px" height="100">
+
+<!-- white  -->
+<rect id="C" x="0"   y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<rect id="D" x="24"  y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<rect id="E" x="48"  y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<rect id="F" x="72"  y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<rect id="G" x="96"  y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<rect id="A" x="120" y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<rect id="B" x="144" y="0" width="24" height="100" style="stroke:black;fill:white"/>
+<!-- black -->
+<rect id="C#" x="16"  y="0" width="16" height="60" style="stroke:black;fill:black"/>
+<rect id="D#" x="40"  y="0" width="16" height="60" style="stroke:black;fill:black"/>
+<rect id="F#" x="88"  y="0" width="16" height="60" style="stroke:black;fill:black"/>
+<rect id="G#" x="112" y="0" width="16" height="60" style="stroke:black;fill:black"/>
+<rect id="A#" x="136" y="0" width="16" height="60" style="stroke:black;fill:black"/>
+</svg>
+
+<p id="notePlayed">Click a key.</p>
+
+<script>
+window.onload = function() {
+  // find all <rect> tags and add click event handlers
+  var rects = document.getElementsByTagName("rect");
+  for(var i = 0; i < rects.length; i++) {
+    var rect = rects[i];
+    if (rect.addEventListener)
+      rect.addEventListener("click", keyOnClickHandler, false);
+    else
+      rect.attachEvent("onclick", keyOnClickHandler); // for IE8
+  }
+  function keyOnClickHandler(event) {
+    document.getElementById('notePlayed').innerHTML = event.target.id;
+  }
+}; 
+</script>
+
+</body>
+</html>
